@@ -9,9 +9,9 @@ spec:
   selector:
     matchLabels:
       app: kafka
+  nodeSelector:
+    kubernetes.io/arch : amd64
   template:
-    nodeSelector:
-      kubernetes.io/arch : amd64
     spec:
       restartPolicy: OnFailure
       containers:
