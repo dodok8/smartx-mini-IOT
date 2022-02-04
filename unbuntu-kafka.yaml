@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kafka
+  namespace: smartx
 spec:
   replicas: 1
   revisionHistoryLimit: 2
@@ -9,9 +10,6 @@ spec:
     matchLabels:
       app: kafka
   template:
-    metadata:
-      labels:
-        app: kafka
     nodeSelector:
       kubernetes.io/arch : amd64
     spec:
@@ -25,5 +23,5 @@ spec:
           image: dodok8/ubuntu-kafka:latest
         - name: broker2
           image: dodok8/ubuntu-kafka:latest
-        - name: broker3
+        - name: consumer
           image: dodok8/ubuntu-kafka:latest
