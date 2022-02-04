@@ -9,8 +9,10 @@ spec:
     matchLabels:
       app: kafka
   template:
+    metadata:
+      labels:
+        app: kafka
     spec:
-      restartPolicy: OnFailure
       nodeSelector:
         kubernetes.io/arch : amd64
       containers:
