@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: SmartX
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: SmartX
+  template:
+    metadata:
+      labels:
+        app: SmartX
+    nodeSelector:
+      kubernetes.io/arch : amd64
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: zookeeper
+          image: dodok8/ubuntu-kafka:latest
+        - name: broker0
+          image: dodok8/ubuntu-kafka:latest
+        - name: broker1
+          image: dodok8/ubuntu-kafka:latest
+        - name: broker2
+          image: dodok8/ubuntu-kafka:latest
+        - name: broker3
+          image: dodok8/ubuntu-kafka:latest

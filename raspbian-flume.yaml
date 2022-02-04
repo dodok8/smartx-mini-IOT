@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: SmartX
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: SmartX
+  template:
+    metadata:
+      labels:
+        app: SmartX
+    nodeSelector:
+      kubernetes.io/arch : armv7
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: flume
+          image: dodok8/raspbian-flume:latest
