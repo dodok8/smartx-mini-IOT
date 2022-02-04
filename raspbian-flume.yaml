@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: SmartX
+  name: flume
 spec:
   replicas: 1
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: SmartX
+      app: flume
   template:
     metadata:
       labels:
-        app: SmartX
+        app: flume
     nodeSelector:
       kubernetes.io/arch : armv7
     spec:
