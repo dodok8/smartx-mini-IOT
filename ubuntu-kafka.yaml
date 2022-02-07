@@ -18,7 +18,8 @@ spec:
       containers:
         - name: zookeeper
           image: dodok8/ubuntu-kafka:v0.0.4
-          command: ["/bin/bash", "-ce"]
+          command: ["/bin/bash", "-c", "--"]
+          args: ["while true; do sleep 30; done;"]
         # - name: broker0
         #   image: dodok8/ubuntu-kafka:v0.0.4
         # - name: broker1
