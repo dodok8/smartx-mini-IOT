@@ -17,4 +17,6 @@ spec:
         kubernetes.io/arch : armv7
       containers:
         - name: flume
-          image: dodok8/raspbian-flume:v0.0.3
+          image: dodok8/raspbian-flume:v0.0.6
+          command: ["/bin/bash", "-c", "--"]
+          args: ["while true; do sleep 30; done;"]
