@@ -12,9 +12,9 @@ spec:
     metadata:
       labels:
         app: flume
-    nodeSelector:
-      kubernetes.io/arch : armv7
     spec:
+      nodeSelector:
+        kubernetes.io/arch : armv7
       containers:
         - name: flume
           image: dodok8/raspbian-flume:latest
