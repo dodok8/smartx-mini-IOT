@@ -18,11 +18,11 @@ spec:
       containers:
         - name: zookeeper
           image: dodok8/ubuntu-kafka:v0.0.4
-        - name: broker0
-          image: dodok8/ubuntu-kafka:v0.0.4
-        - name: broker1
-          image: dodok8/ubuntu-kafka:v0.0.4
-        - name: broker2
-          image: dodok8/ubuntu-kafka:v0.0.4
-        - name: consumer
-          image: dodok8/ubuntu-kafka:v0.0.4
+        # - name: broker0
+        #   image: dodok8/ubuntu-kafka:v0.0.4
+        # - name: broker1
+        #   image: dodok8/ubuntu-kafka:v0.0.4
+        # - name: broker2
+        #   image: dodok8/ubuntu-kafka:v0.0.4
+        # - name: consumer
+        #   image: dodok8/ubuntu-kafka:v0.0.4
