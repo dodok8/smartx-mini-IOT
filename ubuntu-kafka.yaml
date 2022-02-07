@@ -25,4 +25,4 @@ spec:
         - name: broker2
           image: dodok8/ubuntu-kafka:v0.0.4
         - name: consumer
-          image: dodok8/ubuntu-kafka:v0.0.3
+          image: dodok8/ubuntu-kafka:v0.0.4
