@@ -18,6 +18,7 @@ spec:
       containers:
         - name: zookeeper
           image: dodok8/ubuntu-kafka:v0.0.4
+          command: ["/bin/bash", "-ce"]
         # - name: broker0
         #   image: dodok8/ubuntu-kafka:v0.0.4
         # - name: broker1
